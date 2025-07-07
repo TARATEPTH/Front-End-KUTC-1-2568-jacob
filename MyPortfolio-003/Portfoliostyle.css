@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    font-family: 'Kanit', sans-serif;
+    line-height: 1.6;
+}
+
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(px) brightness(0.8);
+    z-index: -1;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    min-height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.header-section {
+    background-color: rgba(240, 240, 240, 0.85);
+    color: #2c3e50;
+    text-align: center;
+    padding: 50px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.header-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    pointer-events: none;
+    border-radius: 12px;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #6c757d;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+h1 {
+    font-family: 'Prompt', sans-serif;
+    font-size: 3.8em;
+    margin-bottom: 10px;
+    color: #34495e;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.tagline {
+    font-size: 1.5em;
+    color: #777;
+    font-weight: 300;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: rgba(104, 103, 103, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-family: 'Prompt', sans-serif;
+    color: #ffffff;
+    font-size: 2.5em;
+    border-bottom: 3px solid #ced4da;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.skill-tag {
+    background-color: #6c757d;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.skill-tag:hover {
+    background-color: #495057;
+    transform: translateY(-3px);
+}
+
+.education-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.education-section th,
+.education-section td {
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.education-section th {
+    background-color: #e9ecef;
+    color: #333;
+    font-weight: bold;
+}
+
+.education-section tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #6c757d;
+    box-shadow: 0 0 0 4px rgba(108, 117, 125, 0.2);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-btn {
+    background-color: #495057;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #343a40;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 15px;
+    }
+
+    .header-section {
+        padding: 40px 20px;
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .tagline {
+        font-size: 1.3em;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .skill-tag {
+        font-size: 1.1em;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-wrapper {
+        padding: 10px;
+    }
+
+    .header-section {
+        padding: 25px 10px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 2.4em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+
+    .card {
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .skills-grid {
+        gap: 8px;
+    }
+
+    .skill-tag {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+
+    .education-section th,
+    .education-section td {
+        font-size: 0.9em;
+    }
+}

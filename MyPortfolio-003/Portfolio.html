@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Portfoliostyle.css">
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div class="content-wrapper">
+        <header class="header-section">
+            <div class="header-content">
+                <img src="pr.JPEG" alt="รูปภาพโปรไฟล์ของคุณ" class="profile-img">
+                <h1>Taratep D.</h1>
+                <p class="tagline">Computer Department</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="skills-section card">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Git & Github</span>
+                    <span class="skill-tag">การออกแบบ UI/UX เบื้องต้น</span>
+                </div>
+            </section>
+
+            <section class="education-section card">
+                <h2>Education</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Institution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2019-2022</td>
+                            <td>Nongkhaman Wittayakhom School</td>
+                        </tr>
+                        <tr>
+                            <td>2022 - 2024</td>
+                            <td>Khumuang Technical College</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="contact-section card">
+                <h2>Contact Me</h2>
+                <form action="#" method="POST" class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="contact-name">Name:</label>
+                        <input type="text" id="contact-name" name="contact_name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email:</label>
+                        <input type="email" id="contact-email" name="contact_email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Subject:</label>
+                        <select id="contact-subject" name="contact_subject">
+                            <option value="job-inquiry">Job Inquiry</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="general">General</option>
+                            <option value="collaboration">Collaboration</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message:</label>
+                        <textarea id="contact-message" name="contact_message" placeholder="Type your message here..." rows="6"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="PortfolioScript.js"></script>
+</body>
+</html>

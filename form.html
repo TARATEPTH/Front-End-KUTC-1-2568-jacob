@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P1>Form Submission</P1>
+    <form action="">
+        <span class="icon">👤</span >
+        <label for="realname">Real Name:</label>
+        <input type="text" id="realname" name="realname" required>
+
+        <br>
+        <span class="icon">👤</span >
+        <label for="surnname">Surname:</label>
+        <input type="text" id="surnname" name="surnname" required>
+    
+        <br>
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" id="male" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female" required>
+        <label for="female">Female</label>
+        <br>
+
+        <p>Department:</p>
+        <select id="department" name="department" required>
+            <option value="" disabled selected>Select a department</option>
+            <option value="Com">Computer</option>
+            <option value="Marketing">Marketing</option>
+            <option value="IT">IT</option>
+        </select>
+
+        <p>Device:</p>
+        <input type="checkbox" id="Phone" name="device">
+        <span class="icon">📱</span>
+        <label for="Phone">Phone</label>
+        <input type="checkbox" id="desktop" name="device" value="desktop">
+        <span class="icon">🖥️</span >
+        <label for="desktop">Desktop</label>
+        <input type="checkbox" id="tablet" name="device" value="tablet">
+        <span class="icon">📱</span>
+        <label for="tablet">Tablet</label>
+        <br>
+        <p>About:</p>
+        <textarea name="about" id="about" placeholder="Tell us about yourself..."></textarea>
+        <br>
+        <p>Birthday:</p>
+        <input type="date" id="birthday" name="birthday" required>
+        <br>
+        <p>choose your profile:</p>
+        <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+        <br>
+        <p>choose your color:</p>
+        <input type="color" id="color" name="color" value="#000000">
+        <br>
+        <p>Choose your salary:</p>
+        <input type="range" id="salary" name="salary" min="0" step="0.01">
+        <br>
+        <p>your Phone number:</p>
+        <input type="number" id="phone" name="phone" required>
+        <br>
+        <p>your password:</p>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
