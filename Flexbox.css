@@ -1,0 +1,73 @@
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin: 10px 0;
+        font-size: 18px;
+    }
+    
+}
+.item {
+    font-family: "Noto Sans Thai", sans-serif;
+    width: 150px;
+    background-color: blue;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border: solid 2px black;
+    margin: 20px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    cursor: pointer;
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+    }
+    &:disabled {
+        background-color: gray;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+    &:first-child {
+        background-color: rgb(54, 187, 231);
+    }
+    &:last-child {
+        background-color: rgb(207, 65, 65);
+    }
+    &:nth-child(2) {
+        background-color: rgb(255, 204, 0);
+    }
+    &:nth-child(3) {
+        background-color: rgb(172, 35, 56);
+    }
+    &:nth-child(4) {
+        background-color: rgb(69, 235, 69);
+    }
+    &:nth-child(5) {
+        background-color: rgb(240, 240, 52);
+    }
+}
+.container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #584f4f;
+}

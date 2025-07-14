@@ -1,0 +1,28 @@
+
+body {
+  text-align: center;
+  font-family: "Noto Sans Thai", sans-serif;
+  background-color: var(--light-gray);
+  flex-direction: column;
+}
+.header {
+
+  color: blue;
+  font-size: 24px;
+  text-align: center;
+}
+.header:active {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}   
+.input:focus {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: rgb(224, 18, 18);
+  border-radius: 4px;
+}
+.list li:nth-child(odd) {
+  background-color: aqua;
+  color: rgb(255, 0, 0);
+}
